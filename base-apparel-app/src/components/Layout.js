@@ -48,18 +48,18 @@ const StyledLayout = styled.div`
         padding: 0;
       }
 
-      fieldset {
+      form {
         padding: 0;
         overflow: visible;
       }
 
-      fieldset input {
+      form input {
         padding: 1em 1.8em 0.9em;
         font-size: 16px;
         width: 400px;
       }
 
-      fieldset button {
+      form button {
         padding: 1em 2.5em 0.6em 2.6em;
         font-size: 18px;
         margin-left: -100px;

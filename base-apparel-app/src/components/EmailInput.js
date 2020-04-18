@@ -10,11 +10,9 @@ import IconError from "../images/icon-error.svg";
 const expression = /(?!.*\.{2})^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
 
 const StyledForm = styled.form`
-  fieldset {
-    padding: 0 2rem;
-    overflow: visible;
-    border: none;
-  }
+  padding: 0 2rem;
+  overflow: visible;
+  border: none;
 
   input {
     padding: 1em 1.8em 0.9em;
@@ -110,29 +108,29 @@ const EmailInput = () => {
 
   return (
     <StyledForm onSubmit={handleOnSubmit}>
-      <fieldset>
-        <label htmlFor="email">
-          <input
-            value={state.email.value}
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            onChange={handleOnChange}
-            className={state.email.error ? "inputError" : ""}
-          />
-        </label>
+      <label htmlFor="email">
+        <input
+          id="email"
+          value={state.email.value}
+          type="email"
+          name="email"
+          placeholder="Email Address"
+          onChange={handleOnChange}
+          className={state.email.error ? "inputError" : ""}
+        />
+      </label>
 
-        <button type="submit" name="submit" disable={disable}>
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20">
-            <path
-              fill="none"
-              stroke="#FFF"
-              stroke-width="2"
-              d="M1 1l8.836 8.836L1 18.671"
-            />
-          </svg>
-        </button>
-      </fieldset>
+      <button type="submit" name="submit" disable={disable}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20">
+          <path
+            fill="none"
+            stroke="#FFF"
+            stroke-width="2"
+            d="M1 1l8.836 8.836L1 18.671"
+          />
+        </svg>
+      </button>
+
       {state.email.error && <p style={errorStyle}>{state.email.error}</p>}
     </StyledForm>
   );
