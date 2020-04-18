@@ -16,7 +16,7 @@ const StyledLayout = styled.div`
     grid-template-rows: 65px 169px auto;
     background: url(${Background}) no-repeat;
     background-size: 820px 800px;
-
+    background-color: hsl(0, 100%, 98%);
     header {
       grid-column: 2 / span 1;
       grid-row: 2 / span 1;
