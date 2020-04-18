@@ -120,7 +120,12 @@ const EmailInput = () => {
         />
       </label>
 
-      <button type="submit" name="submit" disable={disable} role="button">
+      <button
+        type="submit"
+        name="submit"
+        aria-label="submit email"
+        disable={disable}
+      >
         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20">
           <path
             fill="none"
