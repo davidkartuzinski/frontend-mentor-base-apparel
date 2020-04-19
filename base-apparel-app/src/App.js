@@ -47,6 +47,7 @@ const GlobalStyles = createGlobalStyle`
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+    
     }
 
     /* Remove list styles on ul, ol elements with a class attribute */
@@ -90,7 +91,7 @@ const GlobalStyles = createGlobalStyle`
     }
     
     body {
-        background-color: #FFF4F4;
+        background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%) );
         font-size: 16px;
         font-family: 'Josefin Sans', sans-serif;
         font-weight: normal;

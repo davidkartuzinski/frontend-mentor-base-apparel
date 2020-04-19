@@ -23,8 +23,10 @@ const StyledForm = styled.form`
     width: 95%;
     background-color: #fff4f4;
 
+    :focus-within,
     :focus {
       color: hsl(0, 6%, 24%);
+      outline: none;
     }
   }
 
@@ -63,6 +65,7 @@ const StyledForm = styled.form`
         hsl(0, 80%, 86%),
         hsl(0, 82%, 86%)
       );
+      cursor: pointer;
     }
   }
 `;
@@ -111,6 +114,7 @@ const EmailInput = () => {
       <label htmlFor="email">
         <input
           id="email"
+          aria-label="email"
           value={state.email.value}
           type="email"
           name="email"
